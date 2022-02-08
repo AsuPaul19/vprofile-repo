@@ -1,0 +1,8 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Visualpathit VProfile Webapp,com.visualpathit.account.validator,UserValidator,67,0,12,0,14,0,9,0,3,0
+Visualpathit VProfile Webapp,com.visualpathit.account.controller,UserController,44,22,4,2,9,8,4,5,1,5
+Visualpathit VProfile Webapp,com.visualpathit.account.model,Role,0,24,0,0,0,10,0,7,0,7
+Visualpathit VProfile Webapp,com.visualpathit.account.model,User,7,38,0,0,3,16,2,11,2,11
+Visualpathit VProfile Webapp,com.visualpathit.account.service,UserServiceImpl,29,0,0,0,6,0,3,0,3,0
+Visualpathit VProfile Webapp,com.visualpathit.account.service,UserDetailsServiceImpl,41,0,2,0,8,0,3,0,2,0
+Visualpathit VProfile Webapp,com.visualpathit.account.service,SecurityServiceImpl,55,0,4,0,17,0,6,0,4,0

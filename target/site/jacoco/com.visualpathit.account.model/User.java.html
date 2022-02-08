@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>User.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Visualpathit VProfile Webapp</a> &gt; <a href="index.source.html" class="el_package">com.visualpathit.account.model</a> &gt; <span class="el_source">User.java</span></div><h1>User.java</h1><pre class="source lang-java linenums">package com.visualpathit.account.model;
+
+
+import javax.persistence.*;
+import java.util.Set;
+/**{@author waheedk} !*/
+@Entity
+@Table(name = &quot;user&quot;)
+<span class="fc" id="L9">public class User {</span>
+	/** the id field !*/
+    private Long id;
+    /** the user name field !*/
+    private String username;
+    /** the password field !*/
+    private String password;
+    /** the userEmail field !*/
+    private String userEmail;
+    /** the passwordConfirm field !*/
+    private String passwordConfirm;
+    /** the roles field !*/
+    private Set&lt;Role&gt; roles;
+    /** {@inheritDoc}} !*/
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    /** {@link User#id} */
+    public Long getId() {
+<span class="fc" id="L27">        return id;</span>
+    }
+    /** {@inheritDoc}} !*/
+    public final void setId(final Long id) {
+<span class="fc" id="L31">        this.id = id;</span>
+<span class="fc" id="L32">    }</span>
+    /**{@inheritDoc}} !*/
+    public String getUsername() {
+<span class="fc" id="L35">        return username;</span>
+    }
+    /** {@inheritDoc}} !*/
+    public final void setUsername(final String username) {
+<span class="fc" id="L39">        this.username = username;</span>
+<span class="fc" id="L40">    }</span>
+    /**
+     * {@link User#password}
+     * @return The {@link String} instance representing password
+     !*/
+    public String getPassword() {
+<span class="fc" id="L46">        return password;</span>
+    }
+    /**
+     * {@inheritDoc}} 
+     !*/
+    public final void setPassword(final String password) {
+<span class="fc" id="L52">        this.password = password;</span>
+<span class="fc" id="L53">    }</span>
+    /**
+     * {@link User#userEmail}
+     * @return The {@link String} instance representing userEmail.
+     !*/
+    public String getUserEmail() {
+<span class="fc" id="L59">		return userEmail;</span>
+	}
+    /** {@inheritDoc}} !*/
+	public final void setUserEmail(final String userEmail) {
+<span class="fc" id="L63">		this.userEmail = userEmail;</span>
+<span class="fc" id="L64">	}</span>
+
+	 /** {@inheritDoc}} !*/
+	@Transient
+	/**
+     * {@link User#passwordConfirm}
+     !*/
+    public String getPasswordConfirm() {
+<span class="nc" id="L72">        return passwordConfirm;</span>
+    }
+	 /** {@inheritDoc}} !*/
+    public final void setPasswordConfirm(final String passwordConfirm) {
+<span class="nc" id="L76">        this.passwordConfirm = passwordConfirm;</span>
+<span class="nc" id="L77">    }</span>
+    /** {@inheritDoc}} !*/
+    @ManyToMany
+    @JoinTable(name = &quot;user_role&quot;, joinColumns = @JoinColumn(name = &quot;user_id&quot;), inverseJoinColumns = @JoinColumn(name = &quot;role_id&quot;))
+    public Set&lt;Role&gt; getRoles() {
+<span class="fc" id="L82">        return roles;</span>
+    }
+    /** {@inheritDoc}} !*/
+    public final void setRoles(final Set&lt;Role&gt; roles) {
+<span class="fc" id="L86">        this.roles = roles;</span>
+<span class="fc" id="L87">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.2.201409121644</span></div></body></html>
